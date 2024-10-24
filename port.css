@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat Regular";
+}
+
+
+header{
+    background-color: wheat;
+    height: 70px;
+    padding: 0 50px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    
+   
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+header .logo{
+    color: blueviolet;
+    font-size: 2em;
+    font-weight: 600;
+    float: left;
+    display: flex;
+    width: 40%;
+    align-items: center;
+    height: 100%; 
+    animation: slideFromLeft 1s forwards; /* Adjust the duration as needed */
+}
+.logo img:hover{
+    transform: scale(1.2,1.2);
+
+}
+
+
+
+header .menu{
+    float: right;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+    justify-content: center;
+    
+    
+}
+
+
+header .menu li{
+    list-style: none;
+}
+
+
+header .menu a{
+    text-decoration: none;
+    margin: 0 30px;
+    font-size: 1.2em;
+    color: black;
+    text-decoration: none;
+}
+
+
+header .menu a:hover{
+    color: white;
+    font-size: 1.4em;
+    font-weight: 700px;
+}
+
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+    
+}
+
+header .bookme{
+    background-color: crimson;
+    border-radius: 20px;
+    padding: 5px;
+    
+    
+
+}
+
+
+header .bookme:hover{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid hsl(0, 100%, 100%);
+    color: rgb(0, 0, 0) !important;
+    transition: all ease-in-out 0.3s;
+    border-radius: 50px;
+}
+#menu-bottom{
+    visibility: hidden;
+    position: absolute;
+}
+.line{
+    background-color: orange;
+    width: 30px;
+    height: 5px;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all 0.5s ease-in-out;
+
+}
+.menuicon{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    display: none;
+    transform: translateY(-50%);
+    
+}
+@media screen and (max-width: 768px){
+header .logo{
+    float: none;
+    width: auto;
+    justify-content: left;
+}
+header .menu{
+    float: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 70px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+header :checked ~ .menu{
+    bottom: 0;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+}
+header .menuicon{
+    display: block;
+
+}
+header :checked ~ .menuicon .line:nth-child(1){
+    transform: translateY(10px) rotate(225deg);
+}
+header :checked ~ .menuicon .line:nth-child(3){
+    transform: translateY(-10px) rotate(-225deg);
+    
+}
+header :checked ~ .menuicon .line:nth-child(2){
+    opacity: 0;
+}
+}
+
+.content{
+    display: flex;
+    background-color: wheat;
+    width: 100%;
+    height: 500px;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+}
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        padding-top: 20px;
+        align-items: center; 
+    }
+}
+/* about css starts */
+.text{
+    margin: 20px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    width: 60%;
+    padding: 20px;
+    flex-direction: column;
+}
+/* about css ends */
+
+/* propic css start */
+.propic{
+    width: 25%;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.propic img{
+    width: 100%;
+    height: 148%;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.propic img:hover{
+    content: url(image/Img-2.jpg);
+    transform: scale(1.2,1.2);
+}
+.propic:hover{
+    border: 8px solid white;
+}
+@media screen and (max-width: 768px){
+    .propic{
+        flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+}
+.downloadbutton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0); /* Blue background */
+    color: #ffffff; /* White text */
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.downloadbutton:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+.about{
+    width: 50%;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.worksection {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+}
+
+.boxcnt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.boxcnt .box:hover {
+    transition: transform 0.3s ease;
+    transform: translateY(6px);
+}
+
+.box {
+    width: calc(25% - 20px); /* Adjust based on the gap */
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+}
+
+.box p {
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box {
+        width: calc(50% - 20px); /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        width: 100%;
+        height: auto; /* Full width on very small screens */
+    }
+}
+
+/* Services Section */
+.servicesection {
+    text-align: center;
+    padding: 50px 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.servicesection h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.servicebox {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    z-index: -1rvi;
+}
+
+.service {
+    width: 30%;
+    background-color: #fff;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+}
+
+.service h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+.service p {
+    font-size: 1em;
+    color: #666;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .service {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+footer {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Center align text */
+    padding: 20px 0; /* Padding above and below */
+    animation: slideUp 3.0s ease-out forwards; /* Apply the animation */
+}
+
+footer a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* No underline */
+    margin: 0 10px; /* Margin between links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV</title>
+  <style>
+    @font-face {
+      font-family: 'Cocon';
+      src: url('fonts/Cocon.ttf') format('ttf');
+    }
+
+    body {
+      background-color: #333;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      font-family: 'Cocon';
+    }
+
+    .header {
+      padding: 20px;
+      margin: 10px;
+      border: 1px solid rgba(245, 222, 179, 0.365);
+      font-family: 'Cocon';
+      border-radius: 20px; /* Add border-radius for curly borders */
+      box-shadow: 0 4px 8px rgba(245, 222, 179, 0.365); /* Add a light reflection effect */
+    }
+    .section {
+      padding: 20px;
+      margin: 10px;
+      border: 1px solid rgba(245, 222, 179, 0.365);
+      font-family: 'Cocon';
+      border-radius: 20px; /* Add border-radius for curly borders */
+      box-shadow: 0 4px 8px rgba(245, 222, 179, 0.365); /* Add a light reflection effect */
+    }
+
+    .education, .skills {
+      font-family: 'Cocon';
+      margin-top: 20px;
+    }
+    
+    @keyframes slideIn {
+      from {
+        transform: translateX(-5%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+
+
+    .skills {
+      margin-top: 20px;
+
+    }
+
+    .skills ul {
+      list-style-type: none;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .section {
+        padding: 10px;
+        margin: 5px;
+      }
+
+      .header {
+        padding: 10px;
+      }
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 4px 0px rgba(245, 222, 179, 0.365);
+      }
+      to {
+        box-shadow: 0 4px 0px rgba(255, 255, 255, 0.877);
+      }
+    }
+
+    .header{
+      animation: glow 1s ease-in-out infinite alternate;
+      text-align: center;
+  animation: slideIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    }
+  .section.education{
+    animation: glow 1s ease-in-out infinite alternate;
+    text-align: center;
+  animation: slideIn 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .section.skills{
+    animation: glow 1s ease-in-out infinite alternate;
+    text-align: center;
+      animation: slideIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .section.education:hover{
+    background-color: #ffffff;
+    color: black;
+  }
+  .header:hover{
+    background-color: #ffffff;
+    color: black;
+  }
+  .section.skills:hover{
+    background-color: #ffffff;
+    color: black;
+  }
+  body:hover{
+    background-color: #024744;
+
+  }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Asiamah Edward</h1>
+  <p style="font-family: Verdana">Email: mokobilibhad@gmail.com | Phone: 053-777-6646</p>
+</div>
+
+<div class="section education">
+  <h2>Education</h2>
+  <p>Professional Diploma In Graphics And Web Design</p>
+  <p>In Progress</p>
+  <P>Wesley Senior High</P>
+  <P>2019-2022</P>
+</div>
+
+<div class="section skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>Adobe Illustrator</li>
+    <li>Adobe Photoshop</li>
+    <li>Adobe Indesign</li>
+    <li>Adobe XD</li>
+  </ul>
+</div>
+
+</body>
+</html>
